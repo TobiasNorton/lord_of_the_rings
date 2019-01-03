@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @character.name %>
+</p>
+
+<p>
+  <strong>Race:</strong>
+  <%= @character.race %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @character.region %>
+</p>
+
+<p>
+  <strong>Birth year:</strong>
+  <%= @character.birth_year %>
+</p>
+
+<p>
+  <strong>Weapon:</strong>
+  <%= @character.weapon %>
+</p>
+
+<p>
+  <strong>Strength:</strong>
+  <%= @character.strength %>
+</p>
+
+<%= link_to 'Edit', edit_character_path(@character) %> |
+<%= link_to 'Back', characters_path %>
