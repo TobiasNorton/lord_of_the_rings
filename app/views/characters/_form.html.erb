@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :region %>
-    <%= form.text_field :region %>
+    <%= form.collection_select(:model_id, Region.all, :id, :name)%>
   </div>
 
   <div class="field">
