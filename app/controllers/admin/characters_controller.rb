@@ -70,7 +70,7 @@ module Admin
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def character_params
-        params.require(:character).permit(:name, :race, :region, :birth_year, :weapon, :strength)
+        params.require(:character).permit(:name, :race, :region_id, :birth_year, :weapon, :strength)
       end
   end
 end

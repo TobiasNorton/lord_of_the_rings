@@ -1,4 +1,4 @@
 class Character < ApplicationRecord
-  belongs_to :regions
+  belongs_to :region
   validates :name, presence: true
 end

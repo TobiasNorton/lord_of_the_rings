@@ -15,7 +15,7 @@
     <% @regions.each do |region| %>
       <tr>
         <td><%= region.name %></td>
-        <td><%= region.characters %></td>
+        <td><%= region.characters.count %></td>
         <td><%= link_to 'Show', [:admin, region] %></td>
         <td><%= link_to 'Edit', edit_admin_region_path(region) %></td>
         <td><%= link_to 'Destroy', [:admin, region], method: :delete, data: { confirm: 'Are you sure?' } %></td>
