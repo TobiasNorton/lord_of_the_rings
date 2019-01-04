@@ -24,9 +24,9 @@
         <td><%= character.birth_year %></td>
         <td><%= character.weapon %></td>
         <td><%= character.strength %></td>
-        <td><%= link_to 'Show', character %></td>
-        <td><%= link_to 'Edit', edit_character_path(character) %></td>
-        <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [:admin, character] %></td>
+        <td><%= link_to 'Edit', edit_admin_character_path(character) %></td>
+        <td><%= link_to 'Destroy', [:admin, character], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Character', new_character_path %>
+<%= link_to 'New Character', new_admin_character_path %>
