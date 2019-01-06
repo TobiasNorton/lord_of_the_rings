@@ -4,7 +4,7 @@ class Api::RegionsController < ApplicationController
 
     render json: @regions.map { |region|
       {
-        id: region.id
+        id: region.id,
         name: region.name
       }
     }
