@@ -25,7 +25,11 @@
         <% else %>
           <td>Unknown</td>
         <% end %>
-        <td><%= character.birth_year %></td>
+        <% if character.birth_year %>
+          <td><%= character.birth_year %></td>
+        <% else %>
+          <td>Unknown</td>
+        <% end %>
         <td><%= character.weapon %></td>
         <td><%= character.strength %></td>
         <td><%= link_to 'Show', [:admin, character] %></td>
