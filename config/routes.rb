@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :api do
+    get 'regions/index'
+  end
   namespace :admin do
     resources :regions
     resources :characters
