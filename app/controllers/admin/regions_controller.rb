@@ -43,7 +43,7 @@ module Admin
     def update
       respond_to do |format|
         if @region.update(region_params)
-          format.html { redirect_to @region, notice: 'Region was successfully updated.' }
+          format.html { redirect_to [:admin, @region], notice: 'Region was successfully updated.' }
           format.json { render :show, status: :ok, location: @region }
         else
           format.html { render :edit }
@@ -70,7 +70,7 @@ module Admin
     
       # Never trust parameters from the scary internet, only allow the white list through.
       def region_params
-        params.require(:region).permit(:name, :characters)
+        params.require(:region).permit(:name)
       end 
     end
   end
