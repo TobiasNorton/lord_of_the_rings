@@ -15,4 +15,5 @@ class Api::CharactersController < ApplicationController
       }
     }
   end
+
 end
