@@ -1,4 +1,6 @@
 class Api::CharactersController < ApplicationController
+  skip_before_action :verify_authenticity_token
+   
   def index
     @characters = Character.all
 
@@ -16,4 +18,14 @@ class Api::CharactersController < ApplicationController
     }
   end
 
+  def create
+    @character = Character.create(character_params)
+    render json: @character
+  end
+
+  private
+
+  def character_params
+    params.require(:character).permit(:name, :race, :region_id, :region, :birth_year, :weapon, :strength)
+  end
 end

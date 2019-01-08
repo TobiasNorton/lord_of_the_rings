@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     get 'characters/index'
+    post 'characters/create'
   end
   namespace :api do
     get 'regions/index'
